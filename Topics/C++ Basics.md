@@ -56,6 +56,17 @@ When assigning a `bool` value to an interger variable, `true` will be stored as 
 
 A **literal** is a name for one specific value and are often called **constants** in contrast to variables
 
+**Raw string literal** Assign the exact string “\t\\t\n” to the variable s like this
+```cpp
+string s = R"(\t\\t\n)";
+```
+
+**Modifiers** modifies(restricts) the variables being declared. Once example is `const`.
+```cpp
+const int BRANCH_COUNT = 10;
+const int WINDOW_COUNT = 10;
+```
+
 ## Escape sequences
 An **escape sequence** tells the compiler that the sequences following a backslash, \, does not have the same meaning as the character appearing by itself.
 |Sequences|Meaning|
@@ -71,17 +82,6 @@ An **escape sequence** tells the compiler that the sequences following a backsla
 |`\b`|Backspace|
 |`\f`|Form feed|
 |`\?`|Question mark|
-
-**Raw string literal** Assign the exact string “\t\\t\n” to the variable s like this
-```cpp
-string s = R"(\t\\t\n)";
-```
-
-**Modifiers** modifies(restricts) the variables being declared. Once example is `const`.
-```cpp
-const int BRANCH_COUNT = 10;
-const int WINDOW_COUNT = 10;
-```
 
 ## Type Cast
 The expression `static_cast<double>` is like a function that takes an `int` argument and returns an "equivalent" value of type `double`.

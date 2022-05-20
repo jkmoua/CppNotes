@@ -6,9 +6,9 @@ C++ was developed by Bjarne Stroustrup in the early 1980s to overcome the shortc
 
 All procedure-like entities in C++ are called **functions**.
 
-Functions are also called procedures, methods, functions, or subprograms in other languages.
+Functions  in C++ what other languages may call procedures, methods, functions, or subprograms.
 
-A **computer program** is a sequence of instruction that the the computer, step by step, what it is we want it to do.
+A **computer program** is a sequence of instructions that tells the computer, step by step, what it is we want it to do.
 
 **Statements** are the instructions in a computer program.
 

@@ -137,7 +137,7 @@ In the `cin` statement the >> points in the opposite direction from the << in a 
 
 **Extraction Operator Rule #3:** The extraction operator is always customized according to the type of its right operand, so that it will read exactly one value of that type. It then stops, and anything left in the input stream remains there.
 
-When the user types some input and then presses "enter", pressing "enter" causes two things to happen. First it causes the data just typed to be placed into the input stream. Second, it places a newline character into the input stream.
+When the user types some input and then presses "enter", pressing "enter" causes two things to happen. First it causes the data just typed to be placed into the input stream. Second, it places a newline character into the input stream. Notice that even though the newline character, \n, appears to be two characters when we type it, it is actually only a single character when stored in the computer's memory. Remember, characters are stored using ASCII codes. The character '\n' is stored using a single ASCII code.
 
 ```cpp
 cin.ignore(); //This function consumes exactly one character from the input stream. Can be helpful in consuming a newline character left in the input stream from a user pressing enter

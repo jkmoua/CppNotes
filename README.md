@@ -1,2 +1,2 @@
 # Notes
-[C++ Basics](C++ Basics.md)
+[C++ Basics](Topics/C++ Basics.md)

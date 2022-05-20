@@ -56,7 +56,7 @@ When assigning a `bool` value to an interger variable, `true` will be stored as 
 
 A **literal** is a name for one specific value and are often called **constants** in contrast to variables
 
-**Raw string literal** Assign the exact string “\t\\t\n” to the variable s like this
+**Raw string literal** You can assign the exact string “\t\\t\n” to the variable s like this
 ```cpp
 string s = R"(\t\\t\n)";
 ```

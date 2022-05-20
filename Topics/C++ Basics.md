@@ -127,7 +127,7 @@ The symbol "<<" is called the **stream insertion operator** because it is used w
 
 The object `cerr` sends its output to the standard error output stream which is normally the console screen. If you do nothing special to change things, then cout and cerr will both send their output to the console screen, so there is no difference between them.
 
-The `cin` statement the >> points in the opposite direction from the << in a `cout` statement. The word `cin` is a stream that represents the keyboard. The symbol ">>" is called the **stream extraction operator.**
+In the `cin` statement the >> points in the opposite direction from the << in a `cout` statement. The word `cin` is a stream that represents the keyboard. The symbol ">>" is called the **stream extraction operator.**
 
 ### Stream Extraction Operator
 **Extraction Operator Rule #1:** The extraction operator always takes ("extracts") one item from its left operand (the input stream "cin" in this example) and places it into its right operand ("num1" in this example).

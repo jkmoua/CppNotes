@@ -12,6 +12,7 @@ A **computer program** is a sequence of instructions that tells the computer, st
 
 **Statements** are the instructions in a computer program.
 
+## Variable Types
 C++11 includes a variable type name `auto` that deduces the type of variable based on an expression on the right side of the equal sign.
 ```cpp
 auto x = expression;

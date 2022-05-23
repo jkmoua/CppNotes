@@ -18,7 +18,7 @@ C++11 includes a variable type name `auto` that deduces the type of variable bas
 auto x = expression;
 ```
 
-C++11 also introduced a way to determine the type of a variable or expression using `decltype(expression)` The following code declares y to the same type as (x*3.5). Since (x*3.5) is a double, y is declared as a double.
+C++11 also introduced a way to determine the type of a variable or expression using `decltype(expression)` The following code declares y to the same type as `(x*3.5)`. Since `(x*3.5)` is a double, y is declared as a double.
 ```cpp
 int x = 10;
 decltype(x*3.5) y;

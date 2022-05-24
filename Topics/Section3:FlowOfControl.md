@@ -65,7 +65,7 @@ Weather w = Weather::Sun;
 ```
 
 ## The Conditional Operator
-The **conditional operator** is an operator that allows us to embed a condition inside of an expression. Its use is reminiscent of an older programming style, and its use is not advised!
+The **conditional operator** is an operator that allows us to embed a condition inside of an expression. It is reminiscent of an older programming style, and its use is not advised!
 
 Consider the statement
 ```cpp

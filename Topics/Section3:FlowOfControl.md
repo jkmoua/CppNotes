@@ -43,4 +43,41 @@ switch (Controlling_Expression)
 
 If no case label has a constant that matches the value of the controlling expression, then the statements following the default label are executed.
 
-You can use a multiway if-else statement anywhere you can use a switch statement.
+You can use a multiway if-else statement anywhere you can use a switch statement. The switch statement is a particularly better choice for implementing menus.
+
+An **enumeration type** is a type whose values are defined by a list of constants of type int and it is very much like a list of declared constants. If no numeric values are assign to the idenrifiers in an enumeration, the default for the first enumaration constant is 0 and the rest increase by 1 unless you set onbe or more of the constants.
+```cpp
+enum MyEnum { ONE = 17, TWO, THREE, FOUR = −3, FIVE };
+
+//is equivalent to
+
+enum MyEnum { ONE = 17, TWO = 18, THREE = 19, FOUR = −3, FIVE = -2 };
+```
+
+C++11 introduced a new version of enumerations called **stron enums** or **enum classes** which allows us to define an enumberation type whose values are not integers.
+```cpp
+enum class Days { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
+enum class Weather { Rain, Sun };
+Days d = Days::Tue;
+Weather w = Weather::Sun;
+```
+
+## The Conditional Operator
+The **conditional operator** is an operator that allows us to embed a condition inside of an expression. Its use is reminiscent of an older programming style, and its use is not advised!
+
+Consider the statement
+```cpp
+if (n1 > n2)
+ max = n1;
+else
+ max = n2;
+```
+This can be expressed using the conditional operator as follows:
+```cpp
+max = (n1 > n2) ? n1 : n2;
+```
+
+## Loops
+
+
+

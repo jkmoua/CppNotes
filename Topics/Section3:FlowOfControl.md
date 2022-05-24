@@ -45,6 +45,8 @@ If no case label has a constant that matches the value of the controlling expres
 
 You can use a multiway if-else statement anywhere you can use a switch statement. The switch statement is a particularly better choice for implementing menus.
 
+## Enumeration Types
+
 An **enumeration type** is a type whose values are defined by a list of constants of type int and it is very much like a list of declared constants. If no numeric values are assign to the idenrifiers in an enumeration, the default for the first enumaration constant is 0 and the rest increase by 1 unless you set onbe or more of the constants.
 ```cpp
 enum MyEnum { ONE = 17, TWO, THREE, FOUR = −3, FIVE };

@@ -56,7 +56,7 @@ enum MyEnum { ONE = 17, TWO, THREE, FOUR = −3, FIVE };
 enum MyEnum { ONE = 17, TWO = 18, THREE = 19, FOUR = −3, FIVE = -2 };
 ```
 
-C++11 introduced a new version of enumerations called **stron enums** or **enum classes** which allows us to define an enumberation type whose values are not integers.
+C++11 introduced a new version of enumerations called **stron enums** or **enum classes** which allows us to define an enumeration type whose values need not be integers. For example,
 ```cpp
 enum class Days { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
 enum class Weather { Rain, Sun };

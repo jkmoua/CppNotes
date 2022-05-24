@@ -1,4 +1,4 @@
-# Introduction
+# C++ Basics
 
 Most of C is a subset of C++ which means most C programs are also C++ programs. The opposite is not true!
 

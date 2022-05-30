@@ -80,6 +80,50 @@ max = (n1 > n2) ? n1 : n2;
 ```
 
 ## Loops
+The important difference between the **while** and **do-while** loops involves when the controlling Boolean expression is checked. With a while statement, the Boolean expression is checked before the loop body is executed. If the Boolean expression evaluates to false, the body is not executed at all. With a do-while statement, the body of the loop is executed first and the Boolean expression is checked after the loop body is executed. Thus, the do-while statement always executes the loop body at least once.
 
+**A do-while statement**
+```cpp
+do
+{
+  Statement_1
+  Statement_2
+  .
+  .
+  .
+  Statement_Last
+} while (Boolean_Expression);
+```
 
+## The Comma Operator
+The **comma operator** is a way of evaluating a list of expressions and returning the value of the last expression.
 
+The comma operator is illustrated below
+```cpp
+result = (first = 2, second = first + 1);
+//result is set equal to 2
+```
+
+For longer lists of expressions connected with commas, you should use parentheses if the order of evaluation is important.
+For example,
+```cpp
+result = ((first = 2, second = first + 1), third = second + 1);
+//result is set equal to 4
+```
+
+The **for statement** is most commonly used to step through some integer variable in equal increments.
+
+```cpp
+for (Initialization_Action; Boolean_Expression; Update_Action)
+```
+The first expression tells how the variable, variables, or other things are initialized; the second gives a Boolean expression that is used to check for when the loop should end; and the last expression tells how the loop control variable is updated after each iteration of the loop body.
+
+If you place a semicolon after nothing, you still create a statement. Thus, the semicolon by itself is a statement, which is called the **empty statement** or the **null statement.** The empty statement performs no action, but it still is a statement.
+
+The two ways of altering the flow of control are to insert a **break** or **continue** statement. The break statement ends the loop. The continue statement ends the current iteration of the loop body.
+
+When executed, the break statement ends the nearest enclosing switch or loop statement. When executed, the continue statement ends the current loop body iteration of the nearest enclosing loop statement.
+
+when using the continue statement in a for loop is that the continue statement transfers control to the update expression. So, any loop control variable will be updated immediately after the continue statement is executed.
+
+##File Input

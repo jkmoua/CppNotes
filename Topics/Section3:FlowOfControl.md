@@ -103,7 +103,7 @@ The loop patterns discussed here are not actual C++ constructs. They are just he
     cin >> response;
     while (response >= 0){
         <body of loop>
-  
+
         cout << "Enter... (negative number to quit) ";    
         cin >> response;
     }
@@ -123,12 +123,12 @@ A **counter controlled loop** is used when we know before entering the loop how 
 ```cpp
 do
 {
-  Statement_1
-  Statement_2
-  .
-  .
-  .
-  Statement_Last
+    Statement_1
+    Statement_2
+    .
+    .
+    .
+    Statement_Last
 } while (Boolean_Expression);
 ```
 
@@ -152,9 +152,13 @@ result = ((first = 2, second = first + 1), third = second + 1);
 
 The **for statement** is most commonly used to step through some integer variable in equal increments.
 ```cpp
-for (Initialization_Action; Boolean_Expression; Update_Action) {
-  <body>
-}
+    for (Initialization_Action; Boolean_Expression; Update_Action) {
+      <body>
+    }
+
+    for (count = 0; count < N; count++){    
+      <body>    
+    }
 ```
 
 The first expression tells how the variable, variables, or other things are initialized, and is executed exactly once before execution of the loop begins.

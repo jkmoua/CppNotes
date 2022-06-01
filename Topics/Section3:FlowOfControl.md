@@ -83,7 +83,7 @@ max = (n1 > n2) ? n1 : n2;
 The important difference between the **while** and **do-while** loops involves when the controlling Boolean expression is checked. With a while statement, the Boolean expression is checked before the loop body is executed. If the Boolean expression evaluates to false, the body is not executed at all. With a do-while statement, the body of the loop is executed first and the Boolean expression is checked after the loop body is executed. Thus, the do-while statement always executes the loop body at least once.
 
 ### Loop Patterns
-The loop patterns discussed here are no actual C++ constructs. They are just helpful ways to categorize loops while learning. 
+The loop patterns discussed here are not actual C++ constructs. They are just helpful ways to categorize loops while learning. 
 
 **Question Type Loop** - The decision about whether to continue executing the loop is made by asking the user a question.
 ```cpp

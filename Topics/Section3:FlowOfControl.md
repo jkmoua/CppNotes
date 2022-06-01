@@ -134,21 +134,7 @@ do
 
 Use a do-while loop if you know that the user will want to execute the loop at least once. Use a while loop if you aren't sure.
 
-## The Comma Operator
-The **comma operator** is a way of evaluating a list of expressions and returning the value of the last expression.
-
-The comma operator is illustrated below
-```cpp
-result = (first = 2, second = first + 1);
-//result is set equal to 2
-```
-
-For longer lists of expressions connected with commas, you should use parentheses if the order of evaluation is important.
-For example,
-```cpp
-result = ((first = 2, second = first + 1), third = second + 1);
-//result is set equal to 4
-```
+### For loops
 
 The **for statement** is most commonly used to step through some integer variable in equal increments.
 ```cpp
@@ -171,7 +157,23 @@ The two ways of altering the flow of control are to insert a **break** or **cont
 
 When executed, the break statement ends the nearest enclosing switch or loop statement. When executed, the continue statement ends the current loop body iteration of the nearest enclosing loop statement.
 
-when using the continue statement in a for loop is that the continue statement transfers control to the update expression. So, any loop control variable will be updated immediately after the continue statement is executed.
+When using the continue statement in a for loop is that the continue statement transfers control to the update expression. So, any loop control variable will be updated immediately after the continue statement is executed.
+
+## The Comma Operator
+The **comma operator** is a way of evaluating a list of expressions and returning the value of the last expression.
+
+The comma operator is illustrated below
+```cpp
+result = (first = 2, second = first + 1);
+//result is set equal to 2
+```
+
+For longer lists of expressions connected with commas, you should use parentheses if the order of evaluation is important.
+For example,
+```cpp
+result = ((first = 2, second = first + 1), third = second + 1);
+//result is set equal to 4
+```
 
 ## File Input
 

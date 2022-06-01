@@ -82,7 +82,44 @@ max = (n1 > n2) ? n1 : n2;
 ## Loops
 The important difference between the **while** and **do-while** loops involves when the controlling Boolean expression is checked. With a while statement, the Boolean expression is checked before the loop body is executed. If the Boolean expression evaluates to false, the body is not executed at all. With a do-while statement, the body of the loop is executed first and the Boolean expression is checked after the loop body is executed. Thus, the do-while statement always executes the loop body at least once.
 
-**A do-while statement**
+### Loop Patterns
+The loop patterns discussed here are no actual C++ constructs. They are just helpful ways to categorize loops while learning. 
+
+**Question Type Loop** - The decision about whether to continue executing the loop is made by asking the user a question.
+```cpp
+    cout << "Is there a ....? ";
+    cin >> response;
+    while (response == 'Y'){
+        <body of loop>
+  
+        cout << "Is there another ....? ";    
+        cin >> response;
+    }
+```
+
+**Special-Value Type Loop** - The decision about whether to continue executing the loop is made by telling the user to enter aspecial value when they are done.
+```cpp
+    cout << "Enter... (negative number to quit) ";
+    cin >> response;
+    while (response >= 0){
+        <body of loop>
+  
+        cout << "Enter... (negative number to quit) ";    
+        cin >> response;
+    }
+```
+
+A **counter controlled loop** is used when we know before entering the loop how many times it will be executed.
+```cpp
+    count = 0;
+    while (count < howManyTimes){    
+        <body of loop>
+
+        count = count + 1;
+    }
+```
+
+**A do-while statement** - The only difference between a while loop and a do-while loop is that in a while loop the condition is checked at the top of the loop, whereas in a do-while loop the condition is checked at the bottom of the loop.
 ```cpp
 do
 {
@@ -94,6 +131,8 @@ do
   Statement_Last
 } while (Boolean_Expression);
 ```
+
+Use a do-while loop if you know that the user will want to execute the loop at least once. Use a while loop if you aren't sure.
 
 ## The Comma Operator
 The **comma operator** is a way of evaluating a list of expressions and returning the value of the last expression.
@@ -112,11 +151,15 @@ result = ((first = 2, second = first + 1), third = second + 1);
 ```
 
 The **for statement** is most commonly used to step through some integer variable in equal increments.
-
 ```cpp
-for (Initialization_Action; Boolean_Expression; Update_Action)
+for (Initialization_Action; Boolean_Expression; Update_Action) {
+  <body>
+}
 ```
-The first expression tells how the variable, variables, or other things are initialized; the second gives a Boolean expression that is used to check for when the loop should end; and the last expression tells how the loop control variable is updated after each iteration of the loop body.
+
+The first expression tells how the variable, variables, or other things are initialized, and is executed exactly once before execution of the loop begins.
+The second gives a Boolean expression that is checked before each iteration to check if the loop should end.
+The last expression tells how the loop control variable is updated after each iteration of the loop body.
 
 If you place a semicolon after nothing, you still create a statement. Thus, the semicolon by itself is a statement, which is called the **empty statement** or the **null statement.** The empty statement performs no action, but it still is a statement.
 

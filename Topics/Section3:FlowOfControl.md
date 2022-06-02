@@ -187,6 +187,7 @@ Steps to read from or write to a file in your program
     } else {
 ```
 5. Use a special-value type loop to read through the file
+
 Reading one character at a time
 ```cpp
     fileIdentifier.get(ch);
@@ -204,7 +205,8 @@ Reading one string at a time
         fileIdentifier >> astring;
     }
 ```
-The file identifier can be used in place of a logical expression which is why it appears where it does in our loops. When everything is fine, they equate to "true." They equate to "false" when the stream variable has gone into error. Stream variables can go into error for reasons such as the file not being found or when an attempt is made to read past the end of the file. This is useful since this is likely when we want our loop to stop.
+
+Stream variables can be used in place of a logical expression which is why it appears where it does in our loops. When everything is fine, they equate to "true." They equate to "false" when the stream variable has gone into error. Stream variables can go into error for reasons such as the file not being found or when an attempt is made to read past the end of the file. This can be useful since this is likely when we want our loop to stop.
 
 6. Close the file ``fileIdentifier.close();``
 

@@ -178,7 +178,7 @@ result = ((first = 2, second = first + 1), third = second + 1);
 ## File Input
 Steps to read from or write to a file in your program
 1. Add ``#include <fstream>`` to the top of your file
-2. Declare an input stream variable which represents a file``ifstream fileIdentifier;``
+2. Declare an input stream variable which represents a file ``ifstream fileIdentifier;``
 3. Open the file using ``fileIdentifier.open("fileName.txt");``
 4. Check to make sure the file opened successfully
 ```cpp

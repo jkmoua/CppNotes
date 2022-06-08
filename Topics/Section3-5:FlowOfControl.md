@@ -1,5 +1,5 @@
 # Flow of Control
-**Short-circuit evluation** - C++ first evaluates the leftmost of the two expressions joined by an && or ||. If that gives it enough information to determine the final value of the expression (independent of the value of the second expression), then C++ does not bother to evaluate the second expression.
+**Short-circuit evluation** - C++ first evaluates the leftmost of the two expressions joined by an && or ||. If that gives it enough information to determine the final value of the expression (independent of the value of the second expression), then C++ does not bother to evaluate the second expression. ``false && `` and ``true || `` will always be false and true respectively regardless of the second expression.
 
 Short-circuit evaluation can be useful in the even that the second subexpression is undefined i.e. dividing by a variable that may be zero which will cause a run-time error.
 

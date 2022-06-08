@@ -48,9 +48,10 @@ When applied to a function definition, the principle of procedural abstraction m
 -   All variables used in the function body should be declared in the function body. (The parameters do not need to be declared, because they are listed in the function heading.)
 
 ## Random Numbers, rand() and srand()
-The C++ library with header file <cstdlib> contains a random number function named rand. When your program invokes rand, the function returns an integer in the range 0 to RAND_MAX, inclusive. RAND_MAX is a defined integer constant whose definition is also in the library with header file <cstdlib>. The exact value of RAND_MAX is system-dependent but will always be at least 32767 (the maximum two-byte positive integer).
-  
+The C++ library with header file `<cstdlib>` contains a random number function named rand. When your program invokes rand, the function returns an integer in the range 0 to RAND_MAX, inclusive. RAND_MAX is a defined integer constant whose definition is also in the library with header file `<cstdlib>`. The exact value of RAND_MAX is system-dependent but will always be at least 32767 (the maximum two-byte positive integer).
+
 To get a random number in the range 0 to 10, use ``rand() % 11`` For 0 to 100, ``rand() % 101`` etc
-  
+
 rand does not generate truly random numbers. If you could return the computer to the state it was in when the sequence of calls to rand began, you would get the same sequence of “random numbers.”
-  
+
+The function ``srand()`` takes one positive integer argument, which is the **seed** and sets it for the function ``rand.`` If you start the random number generator with the same seed, over and over, then each time it will produce the same (random-looking) sequence of numbers.

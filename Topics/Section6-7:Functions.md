@@ -47,5 +47,8 @@ When applied to a function definition, the principle of procedural abstraction m
 -  The function declaration comment should tell the programmer any and all conditions that are required of the arguments to the function and should describe the result of a function invocation.
 -   All variables used in the function body should be declared in the function body. (The parameters do not need to be declared, because they are listed in the function heading.)
 
-## Random Numbers, the rand() function
+## Random Numbers, rand() and srand()
 The C++ library with header file <cstdlib> contains a random number function named rand. When your program invokes rand, the function returns an integer in the range 0 to RAND_MAX, inclusive. RAND_MAX is a defined integer constant whose definition is also in the library with header file <cstdlib>. The exact value of RAND_MAX is system-dependent but will always be at least 32767 (the maximum two-byte positive integer).
+  
+To get a random number in the range 0 to 10, use ``rand() % 11`` For 0 to 100, ``rand() % 101`` etc
+	

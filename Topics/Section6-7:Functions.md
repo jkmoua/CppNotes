@@ -55,3 +55,10 @@ To get a random number in the range 0 to 10, use ``rand() % 11`` For 0 to 100, `
 rand does not generate truly random numbers. If you could return the computer to the state it was in when the sequence of calls to rand began, you would get the same sequence of “random numbers.”
 
 The function ``srand()`` takes one positive integer argument, which is the **seed** and sets it for the function ``rand.`` If you start the random number generator with the same seed, over and over, then each time it will produce the same (random-looking) sequence of numbers.
+
+For a random probability instead of a random integer, the following generates a pseudorandom floating-point value between 0.0 and 1.0:
+```cpp
+(RAND_MAX - rand( ))/static_cast<double>(RAND_MAX)
+```
+
+Using `#include <ctime>` with the statement `srand(static_cast<unsigned>(time(nullptr)));` will use the clock time to initialize the random number generator which will allow you to get a different sequence of random numbers each time the program is run.

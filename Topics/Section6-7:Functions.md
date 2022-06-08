@@ -52,5 +52,3 @@ The C++ library with header file <cstdlib> contains a random number function nam
   
 To get a random number in the range 0 to 10, use ``rand() % 11`` For 0 to 100, ``rand() % 101`` etc
 
-
-	

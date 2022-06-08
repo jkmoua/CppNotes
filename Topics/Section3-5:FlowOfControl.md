@@ -12,20 +12,20 @@ When a **switch statement** is executed, one of a number of different branches i
 //switch statement syntax
 switch (Controlling_Expression)
 {
-  case Constant_1:
-    Statement_Sequence_1
-    break;
-  case Constant_2:
-    Statement_Sequence_2
-    break;
-      .
-      .
-      .
-  case Constant_n:
-    Statement_Sequence_n
-    break;
-  default:
-    Default_Statement_Sequence
+    case Constant_1:
+        Statement_Sequence_1
+        break;
+    case Constant_2:
+        Statement_Sequence_2
+        break;
+        .
+        .
+        .
+    case Constant_n:
+        Statement_Sequence_n
+        break;
+    default:
+        Default_Statement_Sequence
 }
 ```
 
@@ -33,11 +33,10 @@ You can have two case labels for the same section of code in a switch statement.
 ```cpp
 switch (Controlling_Expression)
 {
-  case 'A':
-  case 'a':
-    cout << "Excellent. "
-         << "You need not take the final.\n";
-    break;
+    case 'A':
+    case 'a':
+        cout << "Excellent. You need not take the final.\n";
+        break;
 }
 ```
 
@@ -70,9 +69,9 @@ The **conditional operator** is an operator that allows us to embed a condition 
 Consider the statement
 ```cpp
 if (n1 > n2)
- max = n1;
+    max = n1;
 else
- max = n2;
+    max = n2;
 ```
 This can be expressed using the conditional operator as follows:
 ```cpp
@@ -139,11 +138,11 @@ Use a do-while loop if you know that the user will want to execute the loop at l
 The **for statement** is most commonly used to step through some integer variable in equal increments.
 ```cpp
     for (Initialization_Action; Boolean_Expression; Update_Action) {
-      <body>
+        <body>
     }
 
     for (count = 0; count < N; count++){    
-      <body>    
+        <body>    
     }
 ```
 

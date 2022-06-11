@@ -27,7 +27,7 @@ decltype(x*3.5) y;
 ## Char Variables
 **Characters** are things like letters ('a', 'Z'), digits ('1','9','0'), and other symbols that might appear on a screen ('$','+','^').
 
-Computers don't actually store characters, they store numbers. When you store a value in a character variable, what is actually being stored is a code (ASCII) that represents that value.
+Computers don't actually store characters, they store numbers. When you store a value in a character variable, what is actually being stored is a code (ASCII) that represents that value. An ASCII table showing the character to number conversions can be found here https://www.asciitable.com/
 
 ## Shorthand Assignment Notation
 
@@ -43,10 +43,10 @@ A shorthand notation exists that combines the asignment operator and an arithmet
 |`amount *= cnt1 + cnt2;`|`amount = amount * (cnt1 + cnt2);`|
 
 ## Assignment Compatibility
-Although it is usually a bad idea to do so, you can store an `int` value such as 65 in a variable of type `char` and you can store a letter such as 'Z' in a variable of type `int`.
+Although it is usually a bad idea to do so, you can store an `int` value such as 65 in a variable of type `char` and you can store a character such as 'Z' in a variable of type `int`. The values of the variables will then be the respective ASCII conversions.
 ```cpp
-char x = 65;
-int y = 'Z';
+char x = 65;  //Here, x will have the character value 'A'
+int y = 'Z';  //Here, y will have the integer value 90
 ```
 C/C++ considers characters to be small integers. Variables of type `char` consume less memory than type `int` so doing arithmetic with variables of type `char` can save some memory.
 

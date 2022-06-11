@@ -5,3 +5,5 @@
 [Flow of Control](./Topics/Section3-5:FlowOfControl.md)
 
 [Functions](./Topics/Section6-7:Functions.md)
+
+[Classes](./Topics/Section8-9:Classes.md)

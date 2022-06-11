@@ -115,7 +115,7 @@ If you insert ``#define NDEBUG`` in your program after it is fully debugged, all
 
 **Driver programs** are special programs written to test individual functions outside of the program they are intended for. All driver programs need to do is obtain reasonable values for the function arguments in as simple a way as possible—typically from the user—then execute the function and show the result.
 
-**Stubs** are simplified versions of missing or untested functions which allow you to test programs that have without needing these complete and tested functions yet. They do not need to perform the correct calculations, but they will deliver values that suffice for testing, and they are simple enough that you can have confidence in their performance.
+**Stubs** are simplified versions of missing or untested functions which allow you to test programs without needing these complete and tested functions yet. They do not need to perform the correct calculations, but they will deliver values that suffice for testing, and they are simple enough that you can have confidence in their performance.
 
 A common approach is to use driver programs to test some basic functions, such as input and output, and then use a program with stubs to test the remaining functions. The stubs are replaced by functions one at a time: One stub is replaced by a complete function and tested; once that function is fully tested, another stub is replaced by a full function definition, and so forth, until the final program is produced.
 

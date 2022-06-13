@@ -105,7 +105,7 @@ private:
 };
 ```
 
-For both structs and classes, their declarations do not allocate memory, they just define what a class will look like.
+For both structs and classes, their declarations do not allocate memory, they just define what the respective type will look like.
 
 For classes in general, it is best practice to make member variables private, and member functions public, unless you have a good reason not to.
 

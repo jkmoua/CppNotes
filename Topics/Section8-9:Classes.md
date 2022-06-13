@@ -1,13 +1,16 @@
 ## Structures
 
-Sometimes it is useful to have a collection of values of different types and to treat the collection as a single item. In C++, structures do exactly this. The ``struct`` keyword defines a structure type and/or a variable of a structure type. 
+Sometimes it is useful to have a collection of values of different types and to treat the collection as a single item. In C++, structures do exactly this.
 
-A **structure** type is a user-defined composite type. It is composed of fields or **members** that can have different types.
+A **structure** type is a user-defined composite type. Analogous to predefined types we are already familiar with such as ``int``, ``double``, and ``char``, we create variables of this type and store values in the variables of specified type. In the case of structures, its values are variables, all of which can be their own type, even other structures! The structure's values are variables called **members** and they will also hold their own values.
+
+Before we can create a variable of a structure type, we must first define what this structure will contain. 
 
 It is a convention that structure type names, the **structure tag,** starts with an uppercase letter.
 
 Creating a structure is as follows
 ```cpp
+//We first define the structure type telling the compiler what the are types of each members and their names.
 struct StructureName{
     member1type member1name;
     member2type member2name;

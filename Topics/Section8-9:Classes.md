@@ -58,7 +58,7 @@ Autombile myCar = {2022, 4, 200.0, 'H'};
 The initializing values must be given in the order that corresponds to the order of member variables in the structure-type definition.
 
 ## Classes
-A **class** is a type that is similar to a structure type, but a class type normally has member functions as well as member variables. A class is a type just like the types int and double. You can have variables of a class type, you can have parameters of a class type, a function can return a value of a class type, and more generally, you can use a class type like any other type.
+A **class** is a type that is similar to a structure type, but a class type normally has member functions as well as member variables. A class is a type just like a structure and the types int and double. You can have variables of a class type, you can have parameters of a class type, a function can return a value of a class type, and more generally, you can use a class type like any other type.
 
 Classes are perhaps the single most significant feature that separates the C++ language from the C language.
 

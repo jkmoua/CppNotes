@@ -25,8 +25,9 @@ struct StructureName{
 
 Once we have defined our structure type, we can create variables of that type. An example below:
 ```cpp
-//We define a struct type called Autombile. 
 //Structs are usually defined globally (outside any function definitions).
+//We define a struct type called Autombile whose values are the variable "year" and "doors"
+//of type int, a variable "horsePower" of type double, and a variable "model" of type char
 struct Automobile
 {
     int year;

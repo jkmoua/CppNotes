@@ -57,3 +57,22 @@ Autombile myCar = {2022, 4, 200.0, 'H'};
 
 The initializing values must be given in the order that corresponds to the order of member variables in the structure-type definition.
 
+## Classes
+A **class** is a type that is similar to a structure type, but a class type normally has member functions as well as member variables. A class is a type just like the types int and double. You can have variables of a class type, you can have parameters of a class type, a function can return a value of a class type, and more generally, you can use a class type like any other type.
+
+Classes are perhaps the single most significant feature that separates the C++ language from the C language.
+
+The value of a variable of a class type is called an **object** (therefore, when speaking loosely, a variable of a class type is also often called an object). An object has both data members and function members.
+
+A **member function** is defined similar to any other function except that the Class_Name and the **scope resolution operator**, ::, are given in the function heading.
+```cpp
+Returned_Type Class_Name::Function_Name(Parameter_List)
+{
+    Function_Body_Statements
+}
+```
+
+### Encapsulation
+A **data type** consists of a collection of values together with a set of basic operations defined on these values. For example, the data type ``int`` has certain specified values, such as 0, 1, -1, 2, and so forth, but the operations on these values (+, -, \*, /, %, etc.)are also just as important.
+
+A data type is called an **abstract data type** (abbreviated **ADT**) if the programmers who use the type do not have access to the details of how the values and operations are implemented. 

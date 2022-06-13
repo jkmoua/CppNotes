@@ -31,7 +31,7 @@ struct Automobile
     char model;
 };
 
-//In our functions, we can create variables of type Automobile to use.
+//In the rest of our program, we can now create variables of type Automobile to use.
 int main()
 {
     //We define variables of type Autombile.

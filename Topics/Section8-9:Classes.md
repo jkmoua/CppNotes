@@ -73,6 +73,6 @@ Returned_Type Class_Name::Function_Name(Parameter_List)
 ```
 
 ### Encapsulation
-A **data type** consists of a collection of values together with a set of basic operations defined on these values. For example, the data type ``int`` has certain specified values, such as 0, 1, -1, 2, and so forth, but the operations on these values (+, -, \*, /, %, etc.)are also just as important.
+A **data type** consists of a collection of values together with a set of basic operations defined on these values. For example, the data type ``int`` has certain specified values, such as 0, 1, -1, 2, and so forth, but the operations on these values (+, -, \*, /, %, etc.) are also just as important.
 
 A data type is called an **abstract data type** (abbreviated **ADT**) if the programmers who use the type do not have access to the details of how the values and operations are implemented. 

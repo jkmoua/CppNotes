@@ -72,6 +72,12 @@ Returned_Type Class_Name::Function_Name(Parameter_List)
 }
 ```
 
+We access and call class member variables and functions the same way as we do structs, using the dot operator:
+```cpp
+classObject.classMemberVariable;
+classObject.classMemberFunction();
+```
+
 ### Encapsulation
 A **data type** consists of a collection of values together with a set of basic operations defined on these values. For example, when we think of the data type ``int`` we think of its specified values, such as 0, 1, -1, 2, and so forth, but the operations on these values (+, -, \*, /, %, etc.) are also just as important.
 

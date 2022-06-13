@@ -11,7 +11,7 @@ It is a convention that structure type names, the **structure tag,** starts with
 Creating a structure is as follows
 ```cpp
 //We first define the structure type telling the compiler what is the name 
-//of the structure type, what are the types of each member and their names.
+//of the structure type, and what are the types of each member and their names.
 struct StructureName{
     member1type member1name;
     member2type member2name;

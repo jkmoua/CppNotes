@@ -182,5 +182,18 @@ The syntax for **explicit constructor calls** is
 ObjectOfClassName = ConstructorName(Arguments_For_Constructor);
 ```
 
-When we want to declare a variable of our class type and invoke the constructor with no arguments we cannot use the empoty parentheses i.e ``MyClass ObjectOfClassName(); //This is WRONG!``
-We may see this as a constructor invocation, but the compiler sees this as a declaration of a function name ``ObjectOfClassName`` that has no parameters and retruns a value of type ``MyClass``
+When we want to declare a variable of our class type and invoke the constructor with no arguments we cannot use the empty parentheses i.e ``MyClass ObjectOfClassName(); //This is WRONG!``
+We may see this as a constructor invocation, but the compiler sees this as a declaration of a function name ``ObjectOfClassName`` that has no parameters and returns a value of type ``MyClass``. The proper way to declare a class variable and invoke the default constructor is ``MyClass ObjectOfClassName;``
+
+Note that when we explicitly invoke a constructor with no arguments, we do include parentheses.
+
+If you define a class and include absolutely no constructors of any kind, then a default constructor will be automatically created. If you include one or more constructors that each takes one or more arguments, but you do not include a default constructor in your class definition, then there is no default constructor and any declaration of a class variable that is invoked with no arguments is illegal.
+
+Best practice is to always include a default constructor.
+
+**Constructor delegation** allows one constructor to call another constructor. For example, we could modify the implementation of the default constructor so that it invokes the constructor with two parameters:
+```cpp
+MyClass::MyClass() : MyClass(Argument1, Argument2)
+{}
+```
+

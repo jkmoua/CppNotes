@@ -126,6 +126,18 @@ For classes, we refer to member functions that allow us to read the data in an o
 ## Interface and Implementation
 We define the rules for how to use a class as the **interface** or **application programmer interface.** For a C++ class, the interface consists of two sorts of things: the comments, usually at the beginning of the class definition, that tell what the data of the object is supposed to represent, such as a date or bank account or state of a simulated car wash; and the public member functions of the class along with the comments that tell how to use these public member functions. In a well-designed class which achieves our goal of encapsulation, the interface of the class should be all you need to know in order to use the class in your program.
 
+The program we write to use the classes we define is referred to as the **client.**
+
 The **implementation** of a class tells how the class interface is realized as C++ code. The implementation consists of the private members of the class and the definitions of both the public and private member functions. Although you need the implementation in order to run a program that uses the class, you should not need to know anything about the implementation in order to write the rest of a program that uses the class; that is, you should not need to know anything about the implementation in order to write the main function of the program and to write any nonmember functions or other classes used by the main function
 
 To test a class for encapsulation (that is, if it properly separates the interface and the implementation) you can try changing the implementation of the class (that is, change the data representation and/or change the implementation of some member functions) without needing to change any (other) code for any program that uses the class definition.
+
+## Constructors
+When you define a class you can define a special kind of member function known as a **constructor.** A constructor is a member function that is automatically called when an object of that class is declared. A constructor is used to initialize the values of some or all member variables and to do any other sort of initialization that may be needed.
+
+You define a constructor the same way that you define any other member function, except for two points:
+1. A constructor must have the same name as the class. For example, if the class is named BankAccount, then any constructor for this class must be named BankAccount
+2. A constructor definition cannot return a value. Moreover, no type, not even void, can be given at the start of the function declaration or in the function header.
+
+Normally, you should make your constructors public member functions.
+

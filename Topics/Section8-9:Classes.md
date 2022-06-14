@@ -139,5 +139,48 @@ You define a constructor the same way that you define any other member function,
 1. A constructor must have the same name as the class. For example, if the class is named BankAccount, then any constructor for this class must be named BankAccount
 2. A constructor definition cannot return a value. Moreover, no type, not even void, can be given at the start of the function declaration or in the function header.
 
-Normally, you should make your constructors public member functions.
+Normally, you should make your constructors public member functions. The syntax for constructors is given below
+```cpp
+class MyClass{
+    public:
+        MyClass(int Parameter1Name, double Parameter2Name);
+    private:
+        int Variable1Name;
+        double Variable2Name;
+};
 
+//The definition of our constructor initializes an object's member variables to the given arguments
+MyClass::MyClass(int Parameter1Name, double Parameter2Name)
+{
+    Variable1Name = Parameter1Name;
+    Variable2Name = Parameter2Name;
+}
+```
+
+We can overload a constructor name just like we can overload any other member function name and define multiple constructors so that it can have no arguments, one argument, two arguments, etc.
+
+The constructor that takes no arguments is called the **default constructor.**
+
+Another syntax to define constructors is
+```cpp
+MyClass::MyClass(int Parameter1Name, double Parameter2Name)
+                            : Variable1Name(Parameter1Name), Variable1Name(Parameter2Name)
+{
+    //constructor statements
+}
+```
+
+The syntax for object declaration when you have constructors is
+```cpp
+MyClass ObjectOfClassName(Arguments_for_Constructor);
+```
+
+A constructor is called automatically whenever you declare an object of the class type, but it can also be called again after the object has been declared which allows us to conveniently set all the members of an object.
+
+The syntax for **explicit constructor calls** is
+```cpp
+ObjectOfClassName = ConstructorName(Arguments_For_Constructor);
+```
+
+When we want to declare a variable of our class type and invoke the constructor with no arguments we cannot use the empoty parentheses i.e ``MyClass ObjectOfClassName(); //This is WRONG!``
+We may see this as a constructor invocation, but the compiler sees this as a declaration of a function name ``ObjectOfClassName`` that has no parameters and retruns a value of type ``MyClass``

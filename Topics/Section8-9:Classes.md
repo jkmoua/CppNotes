@@ -198,3 +198,52 @@ MyClass::MyClass() : MyClass(Argument1, Argument2)
 ```
 
 ## const Parameter Modifier
+
+If you are using a call-by-reference parameter and your function does not change the value of the parameter, you can mark the parameter by placing the modifier ``const`` before the parameter type so that the compiler knows that the parameter should not be changed. This is called a **constant parameter** or **constant call-by-reference parameter.**
+
+If you have a member function that should not change the value of a calling object, you can mark the function with the ``const`` modifier
+
+The syntax for ``const`` is given below
+```cpp
+class Sample
+{
+public:
+    Sample( );
+    void input( );
+    void output( ) const;
+private:
+    int stuff;
+    double moreStuff;
+};
+
+int compare(const Sample& s1, const Sample& s2);
+```
+
+You should use the constmodifier whenever it is appropriate for a class parameter and whenever it is appropriate for a member function of the class. If you do not use const every time that it is appropriate for a class, then you should never use it for that class.
+
+**Inline function definitions** give the complete definition of a member function within the definition of its class and are typically used for very short function definitions.
+
+The code for an inline function declaration is inserted at each location where the function is invoked in order to save the overhead of a function invocation.
+
+Inline functions have the disadvantage of mixing the interface and implementation of a class and so go against the principle of encapsulation. 
+
+To define a nonmember function to be ``inline``, just place the keyword inline before the function declaration and function definition. Example:
+```cpp
+double getRate( ) const { return rate; }
+int getCents( ) const { return accountCents; }
+```
+
+**Static variables** are variables that are shared by all objects of a class and they can be used for objects of a class to communicate with each other or coordinate their actions. Static variables are indicated by the qualifying keyword ``static`` at the start of their declaration.
+```cpp
+static int variable1;
+static bool variable2;
+```
+
+If a function does not access the data of any object and yet you want the function to be a member of the class, you can make it a **static function.** Static functions can be invoked in the normal way, using a calling object of the class, but it is more common and clear to use the form:
+```cpp
+ObjectOfClassName::staticFunctionCall( ) // notice that keyword 'static' is not needed for function definition
+```
+
+Because a static function does not need a calling object, the definition of a static function cannot use anything that depends on a calling object.
+
+

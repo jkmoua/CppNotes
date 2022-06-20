@@ -7,3 +7,5 @@
 [Functions](./Topics/Section6-7:Functions.md)
 
 [Classes](./Topics/Section8-9:Classes.md)
+
+[Arrays](./Topics/Section_10:Arrays.md)

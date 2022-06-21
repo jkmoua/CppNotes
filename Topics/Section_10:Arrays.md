@@ -181,7 +181,7 @@ The function ``cin.putback`` takes one argument of type ``char`` and places the 
 
 The function ``cin.peek`` returns the next character to be read by ``cin``, but does not use up that character; the next read starts with that character.
 
-If you want to skip over input up to some designated character, such as the newline character '\n', you can use the ``cin.ignore`` member function.
+If you want to skip over input up to some designated character you can use the ``cin.ignore`` member function. This is useful to ignore the unexpected '\n' that ends every input line.
 
 ### Character-Manipulating Functions
 Some functions in ``<cctype>``

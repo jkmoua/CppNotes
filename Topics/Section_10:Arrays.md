@@ -108,12 +108,83 @@ Viewing a two-dimensional array as an array of arrays will help you to understan
 The first dimension is really the index of the array and is treated just like an array index for an ordinary, one-dimensional array. The second dimension is part of the description of the base type, which is an array of characters of size 100 for our example above.
 
 ## Vectors
-In C++, once your program creates an array, it cannot change the length of the array. **Vectors** serve the same purpose as arrays except that they can change length while the program is running.
+In C++, once your program creates an array, it cannot change the length of the array. **Vectors** serve the same purpose as arrays except that they can change length while the program is running.Vectors are defined in the library ``vector``, which places them in the ``std`` namespace
 
 You declare a variable, v, for a vector with base type int as follows:
 ```cpp
+#include <vector>
+using namespace std;
+
 vector<int> v;
 ```
 
-The notation ``vector\<int\>`` is a class name, and so the previous declaration of v as a vector of type vector<int> includes a call to the default constructor for the class ``vector\<int\>`` that creates a vector object that is empty (has no elements).
+The notation ``vector<int>`` is a class name, and so the previous declaration of v as a vector of type ``vector<int>`` includes a call to the default constructor for the class ``vector<int>`` that creates a vector object that is empty (has no elements).
 
+You can read and change elements of vectors in the same way as arrays.
+```cpp
+v[i] = 42;
+```
+However, you cannot initialize the ith element using ``v[i]``, you can only change an element that has already been given some value. To add an element to a vector for the first time, you normally use the member function ```push_back``.
+```cpp
+//push_back example
+vector<double> sample;
+sample.push_back(0.0);
+sample.push_back(1.1);
+sample.push_back(2.2);
+```
+
+The member function ``size()`` can be used to determine how many elements are in a vector. This function returns a value of type ``unsigned int``, not a value of type ``int`` and should be automatically converted to type ``int`` when it needs to be, but some compilers may warn you that you are using an ``unsigned int`` where an ``int`` is required. Because of this, you may apply a type cast to be very safe.
+
+### Vector Efficiency
+At any point in time a vector has a **capacity,** which is the number of elements for which it currently has memory allocated. The member function ``capacity( )`` can be used to find out the capacity of a vector. Do not confuse the capacity of a vector with the size of a vector. The size is the number of elements in a vector, whereas the capacity is the number of elements for which there is memory allocated. Typically the capacity is larger than the size, and the capacity is always greater than or equal to the size.
+
+Whenever a vector runs out of capacity and needs room for an additional member, the capacity is automatically increased. The amoun of increase is implementation dependent but always allows room for more capacity than it immediately needed. A common implementation scheme is for the capacity to double whenever it needs to increase.
+
+If efficiency is a concern, you can use the member function ``reserve()`` to explicitly increase the capacity of a vector. For example,
+```cpp
+v.reserve(32);
+```
+sets the capacity to at least 32 elements.
+
+``reserve()`` is good for increasing the capacity of a vector, but it does not necessarily decrease the capacity of a vector if the argument is smaller than the current capacity.
+
+Change the size of a vector using ``resize()``. For example
+```cpp
+v.resize(24);
+```
+reseizes the vector v to 24 elements.
+
+## Character Manipulation Tools
+Any form of string is ultimately composed of individual characters. Thus, when doing string processing it is often helpful to have tools at your disposal to test and manipulate individual values of type ``char``.
+
+Before now, we have used ``cin`` with the extraction operator, ``>>``, in order to read a character of input (or any other input, for that matter). When you use the extraction operator >>, some things are done for you automatically, such as skipping over whitespace. But sometimes you do not want to skip over whitespace. The member function ``cin.get`` reads the next input character no matter whether the character is whitespace or not.
+```cpp
+char nextSymbol;
+cin.get(nextSymbol);
+```
+Your program can read any character in this way.
+
+A useful thing you can do with ``get()`` is ti have youir program detect the end of a line. The example code here echoes a line of input exactly.
+```cpp
+cout << "Enter a line of input and I will echo it:\n";
+char symbol;
+do
+{
+    cin.get(symbol);
+    cout << symbol;
+} while (symbol != '\n');
+cout << "That's all for this demonstration.\n";
+```
+
+'\n' is a value of type ``char``. "\n" is a value of type ``string`` and thus cannot be stored in a variable fo type ``char``.
+
+The member function ``cout.put()`` allows your program to output one character and is analogous to ``get()``.
+
+The function ``cin.putback`` takes one argument of type ``char`` and places the value of that argument back in the input stream so that it will be the next character to be read. The argument can be any expression that evaluates to a value of type ``char``.
+
+The function ``cin.peek`` returns the next character to be read by ``cin``, but does not use up that character; the next read starts with that character.
+
+If you want to skip over input up to some designated character, such as the newline character '\n', you can use the ``cin.ignore`` member function.
+
+### Character-Manipulating Functions
+Some functions in ``<cctype>``

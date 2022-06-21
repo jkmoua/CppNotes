@@ -115,5 +115,5 @@ You declare a variable, v, for a vector with base type int as follows:
 vector<int> v;
 ```
 
-The notation vector<int> is a class name, and so the previous declaration of v as a vector of type vector<int> includes a call to the default constructor for the class vector<int> that creates a vector object that is empty (has no elements).
+The notation vector\<int>\ is a class name, and so the previous declaration of v as a vector of type vector<int> includes a call to the default constructor for the class vector<int> that creates a vector object that is empty (has no elements).
 

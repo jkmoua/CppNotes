@@ -154,7 +154,7 @@ resizes the vector v to 24 elements. If the previous size was less than 24 then 
 ## Character Manipulation Tools
 Any form of string is ultimately composed of individual characters. Thus, when doing string processing it is often helpful to have tools at your disposal to test and manipulate individual values of type ``char``.
 
-Before now, we have used ``cin`` with the extraction operator, ``>>``, in order to read a character of input (or any other input, for that matter). When you use the extraction operator >>, some things are done for you automatically, such as skipping over whitespace. But sometimes you do not want to skip over whitespace. The member function ``cin.get`` reads the next input character no matter whether the character is whitespace or not.
+Before now, we have used ``cin`` with the extraction operator, ``>>``, in order to read a character of input (or any other input, for that matter). When you use the extraction operator ``>>``, some things are done for you automatically, such as skipping over whitespace. But sometimes you do not want to skip over whitespace. The member function ``cin.get`` reads the next input character no matter whether the character is whitespace or not.
 ```cpp
 char nextSymbol;
 cin.get(nextSymbol);

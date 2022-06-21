@@ -21,10 +21,7 @@ Some but not all compilers will allow you to specify the size of an array using 
 ## Arrays in Memory
 The locations of the various array indexed variables for a specific array are always placed next to one another in memory. For example, when you declare the array ``int a[6];``, the computer reserves enough memory to hold six variables of type int one after the other. The computer then remembers only the address of the variable indexed 0, but not any of the other indexed variables. When your program needs the address of some other indexed variable in this array, the computer calculates the address for this other indexed variable from the address of ``a[0]``. This implementation of arrays in C++ is responsible for many of the peculiarities of arrays in C++.
 
-On most systems, the result of an illegal array index is that your program will simply do something wrong, possibly disastrously wrong, and will do so without giving you any warning. Consider our array from before 
-```cpp
-int a[6];
-```
+On most systems, the result of an illegal array index is that your program will simply do something wrong, possibly disastrously wrong, and will do so without giving you any warning. Consider our array from before ``int a[6];``
 Suppose we later write
 ```cpp
 a[i] = 238;

@@ -1,5 +1,5 @@
 # Notes
-## Introduction to C++
+### Introduction to C++
 
 [C++ Basics](./IntroTopics/Section1-2:C++_Basics.md)
 
@@ -10,3 +10,7 @@
 [Classes](./IntroTopics/Section8-9:Classes.md)
 
 [Arrays](./IntroTopics/Section_10:Arrays.md)
+
+### Intermediate C++
+
+

@@ -130,7 +130,7 @@ sample.push_back(1.1);
 sample.push_back(2.2);
 ```
 
-The member function ``size()`` can be used to determine how many elements are in a vector. This function returns a value of type ``unsigned int``, not a value of type ``int`` and should be automatically converted to type ``int`` when it needs to be, but some compilers may warn you that you are using an ``unsigned int`` where an ``int`` is required. Because of this, you may apply a type cast to be very safe.
+The member function ``size()`` can be used to determine how many elements are in a vector. This function returns a value of type ``unsigned int``, not a value of type ``int`` and should be automatically converted to type ``int`` when it needs to be, but some compilers may warn you that you are using an ``unsigned int`` where an ``int`` is required. Because of this, you may apply a type cast to be safe.
 
 ### Vector Efficiency
 At any point in time a vector has a **capacity,** which is the number of elements for which it currently has memory allocated. The member function ``capacity( )`` can be used to find out the capacity of a vector. Do not confuse the capacity of a vector with the size of a vector. The size is the number of elements in a vector, whereas the capacity is the number of elements for which there is memory allocated. Typically the capacity is larger than the size, and the capacity is always greater than or equal to the size.

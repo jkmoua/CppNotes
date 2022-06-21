@@ -175,7 +175,7 @@ cout << "That's all for this demonstration.\n";
 
 '\n' is a value of type ``char``. "\n" is a value of type ``string`` and thus cannot be stored in a variable fo type ``char``.
 
-The member function ``cout.put()`` allows your program to output one character and is analogous to ``get()``. ``put()`` does not allow you to do anything you could not do with the insertion operator ``<<`.
+The member function ``cout.put()`` allows your program to output one character and is analogous to ``get()``. ``put()`` does not allow you to do anything you could not do with the insertion operator ``<<``.
 
 The function ``cin.putback`` takes one argument of type ``char`` and places the value of that argument back in the input stream so that it will be the next character to be read. The argument can be any expression that evaluates to a value of type ``char``.
 

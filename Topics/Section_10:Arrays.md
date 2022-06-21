@@ -143,13 +143,13 @@ v.reserve(32);
 ```
 sets the capacity to at least 32 elements.
 
-``reserve()`` is good for increasing the capacity of a vector, but it does not necessarily decrease the capacity of a vector if the argument is smaller than the current capacity.
+``reserve()`` works well for increasing the capacity of a vector, but it does not necessarily decrease the capacity of a vector if the argument is smaller than the current capacity.
 
 Change the size of a vector using ``resize()``. For example
 ```cpp
 v.resize(24);
 ```
-reseizes the vector v to 24 elements.
+resizes the vector v to 24 elements.
 
 ## Character Manipulation Tools
 Any form of string is ultimately composed of individual characters. Thus, when doing string processing it is often helpful to have tools at your disposal to test and manipulate individual values of type ``char``.

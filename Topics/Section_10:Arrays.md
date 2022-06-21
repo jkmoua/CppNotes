@@ -149,7 +149,7 @@ Change the size of a vector using ``resize()``. For example
 ```cpp
 v.resize(24);
 ```
-resizes the vector v to 24 elements.
+resizes the vector v to 24 elements. If the previous size was less than 24 then the new elements are initialized with the constructor with an integer argument. If the previous size was greater than 24, then all but the first 24 elements are lost.
 
 ## Character Manipulation Tools
 Any form of string is ultimately composed of individual characters. Thus, when doing string processing it is often helpful to have tools at your disposal to test and manipulate individual values of type ``char``.

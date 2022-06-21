@@ -105,7 +105,7 @@ Viewing a two-dimensional array as an array of arrays will help you to understan
 The first dimension is really the index of the array and is treated just like an array index for an ordinary, one-dimensional array. The second dimension is part of the description of the base type, which is an array of characters of size 100 for our example above.
 
 ## Vectors
-In C++, once your program creates an array, it cannot change the length of the array. **Vectors** serve the same purpose as arrays except that they can change length while the program is running.Vectors are defined in the library ``vector``, which places them in the ``std`` namespace
+In C++, once your program creates an array, it cannot change the length of the array. **Vectors** serve the same purpose as arrays except that they can change length while the program is running. Vectors are defined in the library ``vector``, which places them in the ``std`` namespace
 
 You declare a variable, v, for a vector with base type int as follows:
 ```cpp

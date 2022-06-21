@@ -80,7 +80,7 @@ void arrayFunc(const double a[], int arraySize);
 
 Functions may not return an array in the same way they can return a value of type ``int`` or ``double``. To acheive this functionality, you return a pointer to the array. This is discussed in the pointers section.
 
-OFten, the exact size needed for an array is not known when a program is written. Thus, it is common to declare an array to be of the largest size the program could possibly need and allow it to use as much or as little of the array as is needed.
+Often, the exact size needed for an array is not known when a program is written. Thus, it is common to declare an array to be of the largest size the program could possibly need and allow it to use as much or as little of the array as is needed.
 
 ## Multidimensional Arrays
 Declare a multimensional array as follows

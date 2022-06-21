@@ -1,11 +1,12 @@
 # Notes
+## Introduction to C++
 
-[C++ Basics](./Topics/Section1-2:C++_Basics.md)
+[C++ Basics](./IntroTopics/Section1-2:C++_Basics.md)
 
-[Flow of Control](./Topics/Section3-5:FlowOfControl.md)
+[Flow of Control](./IntroTopics/Section3-5:FlowOfControl.md)
 
-[Functions](./Topics/Section6-7:Functions.md)
+[Functions](./IntroTopics/Section6-7:Functions.md)
 
-[Classes](./Topics/Section8-9:Classes.md)
+[Classes](./IntroTopics/Section8-9:Classes.md)
 
-[Arrays](./Topics/Section_10:Arrays.md)
+[Arrays](./IntroTopics/Section_10:Arrays.md)

@@ -121,7 +121,7 @@ You can read and change elements of vectors in the same way as arrays.
 ```cpp
 v[i] = 42;
 ```
-However, you cannot initialize the ith element using ``v[i]``, you can only change an element that has already been given some value. To add an element to a vector for the first time, you normally use the member function ```push_back``.
+However, you cannot initialize the ith element using ``v[i]`` like how you would in an array; you can only change an element that has already been given some value. To add an element to a vector for the first time, you normally use the member function ```push_back``.
 ```cpp
 //push_back example
 vector<double> sample;

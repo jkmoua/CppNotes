@@ -135,7 +135,7 @@ The member function ``size()`` can be used to determine how many elements are in
 ### Vector Efficiency
 At any point in time a vector has a **capacity,** which is the number of elements for which it currently has memory allocated. The member function ``capacity( )`` can be used to find out the capacity of a vector. Do not confuse the capacity of a vector with the size of a vector. The size is the number of elements in a vector, whereas the capacity is the number of elements for which there is memory allocated. Typically the capacity is larger than the size, and the capacity is always greater than or equal to the size.
 
-Whenever a vector runs out of capacity and needs room for an additional member, the capacity is automatically increased. The amoun of increase is implementation dependent but always allows room for more capacity than it immediately needed. A common implementation scheme is for the capacity to double whenever it needs to increase.
+Whenever a vector runs out of capacity and needs room for an additional member, the capacity is automatically increased. The amount of increase is implementation dependent but always allows room for more capacity than it immediately needed. A common implementation scheme is for the capacity to double whenever it needs to increase.
 
 If efficiency is a concern, you can use the member function ``reserve()`` to explicitly increase the capacity of a vector. For example,
 ```cpp

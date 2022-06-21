@@ -188,3 +188,17 @@ If you want to skip over input up to some designated character, such as the newl
 
 ### Character-Manipulating Functions
 Some functions in ``<cctype>``
+|Function               |Description                |
+|---                    |---                        |
+|``toupper(char_exp)``  |Returns uppercase version of ``char_exp`` (as a value of type ``int``)|
+|``tolower(char_exp)``  |Returns lowercase version of ``char_exp`` (as a value of type ``int``)|
+|``isupper(char_exp)``  |Returns ``true`` if ``char_exp`` is uppercase; ``false`` otherwise|
+|``islower(char_exp)``  |Returns ``true`` if ``char_exp`` is lowercase; ``false`` otherwise|
+|``isalpha(char_exp)``  |Returns ``true`` if ``char_exp`` is letter of the alphabet; ``false`` otherwise|
+|``isdigit(char_exp)``  |Returns ``true`` if ``char_exp`` is a digit '0' through '9'; ``false`` otherwise|
+|``isalnum(char_exp)``  |Returns ``true`` if ``char_exp`` is a letter or digit; ``false`` otherwise|
+|``isspace(char_exp)``  |Returns ``true`` if ``char_exp`` is a whitespace character(blank or newline); ``false`` otherwise|
+|``ispunct(char_exp)``  |Returns ``true`` if ``char_exp`` is a character other than whitespace, letter, or digit; ``false`` otherwise|
+|``isprint(char_exp)``  |Returns ``true`` if ``char_exp`` is a printing character; ``false`` otherwise|
+|``isgraph(char_exp)``  |Returns ``true`` if ``char_exp`` is a printing character other than whitespace; ``false`` otherwise|
+|``isctrl(char_exp)``   |Returns ``true`` if ``char_exp`` is a control character; ``false`` otherwise|

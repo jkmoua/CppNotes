@@ -161,7 +161,7 @@ cin.get(nextSymbol);
 ```
 Your program can read any character in this way.
 
-A useful thing you can do with ``get()`` is ti have youir program detect the end of a line. The example code here echoes a line of input exactly.
+A useful thing you can do with ``get()`` is to have your program detect the end of a line. The example code here echoes a line of input exactly.
 ```cpp
 cout << "Enter a line of input and I will echo it:\n";
 char symbol;

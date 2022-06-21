@@ -187,8 +187,8 @@ If you want to skip over input up to some designated character you can use the `
 Some functions in ``<cctype>``
 |Function               |Description                |
 |---                    |---                        |
-|``toupper(char_exp)``  |Returns uppercase version of ``char_exp`` (as a value of type ``int``)|
-|``tolower(char_exp)``  |Returns lowercase version of ``char_exp`` (as a value of type ``int``)|
+|``toupper(char_exp)``  |Returns uppercase version of ``char_exp`` (as a value of type ``int``, remember ASCII)|
+|``tolower(char_exp)``  |Returns lowercase version of ``char_exp`` (as a value of type ``int``, remember ASCII)|
 |``isupper(char_exp)``  |Returns ``true`` if ``char_exp`` is uppercase; ``false`` otherwise|
 |``islower(char_exp)``  |Returns ``true`` if ``char_exp`` is lowercase; ``false`` otherwise|
 |``isalpha(char_exp)``  |Returns ``true`` if ``char_exp`` is letter of the alphabet; ``false`` otherwise|

@@ -219,7 +219,7 @@ private:
 int compare(const Sample& s1, const Sample& s2);
 ```
 
-You should use the constmodifier whenever it is appropriate for a class parameter and whenever it is appropriate for a member function of the class. If you do not use const every time that it is appropriate for a class, then you should never use it for that class.
+You should use the ``const`` modifier whenever it is appropriate for a class parameter and whenever it is appropriate for a member function of the class. If you do not use const every time that it is appropriate for a class, then you should never use it for that class.
 
 **Inline function definitions** give the complete definition of a member function within the definition of its class and are typically used for very short function definitions.
 

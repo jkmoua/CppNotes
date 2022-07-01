@@ -13,4 +13,4 @@
 
 ### Intermediate C++
 
-[Pointers and Memory]()
+[Pointers and Memory](./IntermediateTopics/PointersAndMemory.md)

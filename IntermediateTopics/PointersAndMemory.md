@@ -118,7 +118,93 @@ void sampleFunction(IntPtr& pointerVariable);
 void sampleFunction(int*& pointerVariable);
 ```
 
-###Pointers as Call-by-Value Parameters
-When a call-by-value parameter is of a pointer type, its behavior can occasionally be subtle and troublesome. A pointer has two things associated with it: the pointer value (memory address) and the value stored where p points. A function may change the value of the variable pointed to by a pointer (`*ptr`) while not change the value of `ptr` itself.
+### Pointers as Call-by-Value Parameters
+When a call-by-value parameter is of a pointer type, its behavior can occasionally be subtle and troublesome. A pointer has two things associated with it: the pointer value (memory address) and the value stored where p points. A function may change the value of the variable pointed to by a pointer (`*ptr`) while still not changing the value of `ptr` itself.
 
 ## Dynamic Arrays
+A **dynamically allocated array** (also called simply a **dynamic array**) is an array whose size is not specified when you write the program, but is determined while the program is running.
+
+A pointer is a memory address so in C++, an array variable is actually a kind of pointer that points to the first indexed variable of an array.
+```cpp
+// both a and p are pointer variables
+int a[10];
+int *p;
+
+// the value of a can be assigned to the pointer variable p as follows
+p = a;
+
+// after this assignment, p points to the same memory location that a points to
+// Thus, p[0], p[1], .... refer to the indexed variable a[0], a[1],...
+```
+
+The square bracket notation we have been using for arrays applies to pointer variables as long as the pointer variable points to an array in memory.
+
+You cannot change the pointer value in an array variable.
+```cpp
+int* p2;
+a = p2;     // illegal
+```
+
+The underlying reason why this assignment does not work is that an array variable is not of type `int*`, but its type is a _const_ version of `int*`. An array variable, like _a_, is a pointer variable with the modifier _const_, which means that its value cannot be changed.
+
+In C++ an array type is not allowed as the return type of a function. If you want to create a function similar to this, you must return a pointer to the array base type and have the pointer point to the array. 
+```cpp
+int [] someFunction( ); //ILLEGAL
+
+int* someFunction( ); //Legal
+```
+
+### How to Use a Dynamic Array
+1. Define a pointer type: Define a type for pointers to variables of the same type as the elements of the array.
+```cpp
+typedef double* DoubleArrayPtr;
+```
+2. Declare a pointer variable: Declare a pointer variable of this defined type. The pointer variable will point to the dynamically allocated array in memory and will serve as the name of the dynamic array.
+```cpp
+DoubleArrayPtr a;
+```
+3. Call _new_: Create a dynamic array using the new operator:
+```cpp
+a = new double [arraySize];
+```
+4. Use like an ordinary array: The pointer variable, such as _a_, is used just like an ordinary 
+array. For example, the indexed variables are written in the usual way: `a[0]`, `a[1]`, and 
+so forth.
+5. Call _delete[]_: When your program is finished with the dynamically allocated array variable, use delete and empty square brackets along with the pointer variable to eliminate the dynamic array and return the storage that it occupies to the freestore manager for reuse.
+```cpp
+delete [] a;
+```
+
+## Classes, Pointers, and Dynamic Arrays
+The **arrow operator**, `->`, combines the actions of a dereferencing operator, `*`, and a dot operator to specify a member of a dynamic struct or class object that is pointed to by a given pointer.
+
+When defining member functions for a class, you sometimes want to refer to the calling object. The _**this**_ pointer is a predefined pointer that points to the calling object. 
+
+Notice that _this_ is not the name of the calling object, but is the name of a pointer that points to the calling object. The _this_ pointer cannot have its value changed; it always points to the calling object.
+
+## Overloading the = Operator
+The reason that the predefined assignment operator returns a reference is so that you can invoke a member function with the value returned, as in
+```cpp
+(a = b).f( );     // where f is a member function.
+```
+
+If you want your overloaded versions of the assignment operator to allow for invoking member functions in this way, then you should have them return a reference.
+
+The definition of the overloaded assignment operator uses the this pointer to return the object on the left side of the = sign (which is the calling object).
+
+## Destructors
+Dynamically allocated variables have one problem: They do not go away unless your program makes a suitable call to _delete_.
+
+A **destructor** is a member function that is called automatically when an object of the class passes out of scope. If your program contains a local variable that names an object from a class with a destructor, then when the function call ends, the destructor will be called automatically. If the destructor is defined correctly, the destructor will call _delete_ to eliminate all the dynamically allocated variables created by the object.
+
+Like a constructor, a destructor always has the same name as the class of which it is a member, but the destructor has the tilde symbol, *~*, at the beginning of its name. A destructor has no parameters. Thus, a class can have only one destructor; you cannot overload the destructor for a class.
+
+## Copy Constructors
+A **copy constructor** is a constructor that has one parameter that is of the same type as the class. The one parameter must be a call-by-reference parameter, and normally the parameter is preceded by the const parameter modifier, so it is a constant parameter. 
+
+In particular, the copy constructor is called automatically in three circumstances:
+1. When a class object is being declared and is initialized by another object of the same type given in parentheses. (This is the case of using the copy constructor like any other constructor.)
+2. When a function returns a value of the class type.
+3. Whenever an argument of the class type is “plugged in” for a call-by-value parameter. In this case, the copy constructor defines what is meant by “plugging in
+
+Any class that uses pointers and the operator _new_ should have a copy constructor.

@@ -16,3 +16,5 @@
 [Pointers and Memory](./IntermediateTopics/PointersAndMemory.md)
 
 [Recursion](./IntermediateTopics/Recursion.md)
+
+[Bitwise Operators](./IntermediateTopics/BitwiseOperators.md)

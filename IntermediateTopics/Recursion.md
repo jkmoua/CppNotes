@@ -27,5 +27,30 @@ The computer uses portions of memory rather than pieces of paper. The content of
 If there is a long chain in which a function makes a recursive call to itself, and that call results in another recursive call, and that call produces yet another recursive call, and so forth, then each recursive call in this chain will cause another activation frame to be placed on the stack. If this chain is too long, the stack will attempt to grow beyond its limit. This is an error condition known as a **stack overflow.**
 
 A function that uses **tail recursion** has the property that no further computation occurs after the recursive call; the function immediately returns.
+```cpp
+// a tail recursive vs non-tail recursive example
+
+// non-tail recursive Fibonacci sequence
+int fib(int x) {
+    if (x == 1) {
+        return 0;
+    } else if (x == 2) {
+        return 1;
+    } 
+    return fib(x - 1) + fib(x - 2);
+}
+
+// tail recursive Fibonacci sequence
+// first parameter denotes the level of recursion
+// second parameter stores the intermediate result (that is the n-th Fibonacci number)
+// third parameter adds up the previous two and pass it to next level
+// So, virtually, the value of current iteration is the value of the next recursive step
+int fib_tail(int n, int res, int next) {
+    if (n == 1) {
+        return res;
+    }
+    return fib_tail(n - 1, next, res + next);
+}
+```
 
 ## Recursive Functions That Return a Value

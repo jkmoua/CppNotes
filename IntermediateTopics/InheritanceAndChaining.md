@@ -6,6 +6,22 @@ A **derived class** automatically has all the member variables and all the ordin
 ### Parent and Child Classes
 When discussing derived classes, it is common to use terminology derived from family relationships. A base class is often called a parent class. A derived class is then called a child class. This makes the language of inheritance very smooth. For example, we can say that a child class inherits member variables and member functions from its parent class. This analogy is often carried one step further. A class that is a parent of a parent of a parent of another class (or some other number of “parent of” iterations) is often called an ancestor class. If class A is an ancestor of class B, then class B is often called a descendant of class A.
 
+### Proper Use of Derived Classes
+A derived class must possess an is a relationship with its base class. An Employee is a Person. A Truck is an Automobile. A PhoneWX is a Phone. However, a UserInterfaceForEmployee is NOT an Employee, and an EnginePart is NOT an Automobile. Making one class a sub-class of another just because, in your own mind, you can program something more easily is wrong headed.
+
+### Fundamental Law of Base/Derived Pointers
+A base class pointer can point to a derived class object without being cast (coerced).  A derived class pointer can only point to a base class object if a type cast is used.
+```cpp
+Phone *phPtr, myPhone;
+PhoneWX *pwxPtr, myPwx;
+
+phPtr = &myPwx;  // ok
+phPtr = pwxPtr;  // ok
+pwxPtr = &myPhone;  // compiler error
+pwxPtr = phPtr;  // compiler error
+pwxPtr = (PhoneWX *)phPtr;  // ok
+```
+
 ### An Object of a Derived Class Has More Than One Type
 In everyday experience, an hourly employee is an employee. In C++ the same sort of thing holds. Since HourlyEmployee is a derived class of the class Employee, every object of the class HourlyEmployee can be used anyplace an object of the class Employee can be used. In particular, you can use an argument of type HourlyEmployee when a function requires an argument of type Employee. You can assign an object of the class HourlyEmployee to a variable of type Employee. (But be warned: you cannot assign a plain old Employee object to a variable of type HourlyEmployee. After all, an Employeeis not necessarily an HourlyEmployee.) Of course, the same remarks apply to any base class and its derived class. You can use an object of a derived class anyplace that an object of its base class is allowed. More generally, an object of a class type can be used any place that an object of any of its ancestor classes can be used. If class Child is derived from class Ancestor and class Grandchild is derived from class Child, then an object of class Grandchild can be used any place an object of class Child can be used, and the object of class Grandchild can also be used anyplace that an object of class Ancestor can be used.
 

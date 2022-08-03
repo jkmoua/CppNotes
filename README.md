@@ -18,3 +18,9 @@
 [Recursion](./IntermediateTopics/Recursion.md)
 
 [Bitwise Operators](./IntermediateTopics/BitwiseOperators.md)
+
+[Inheritance and Chaining](./IntermediateTopics/InheritanceAndChaining.md)
+
+[Polymorphism](./IntermediateTopics/Polymorphism.md)
+
+[Streams and Templates](./IntermediateTopics/StreamsAndTemplates.md)

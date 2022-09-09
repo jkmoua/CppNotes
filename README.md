@@ -19,8 +19,16 @@
 
 [Bitwise Operators](./IntermediateTopics/BitwiseOperators.md)
 
+[Trees and Deep Copies](./IntermediateTopics/TreesandDeepCopies.md)
+
+[Exceptions and Operator Overloading](./IntermediateTopics/ExceptionsandOperatorOverloading.md)
+
 [Inheritance and Chaining](./IntermediateTopics/InheritanceAndChaining.md)
 
-[Polymorphism](./IntermediateTopics/Polymorphism.md)
+[Polymorphism and Virtual Functions](./IntermediateTopics/Polymorphism.md)
 
 [Streams and Templates](./IntermediateTopics/StreamsAndTemplates.md)
+
+[The STL](./IntermediateTopics/STL.md)
+
+[Sorting](./IntermediateTopics/Sorting.md)

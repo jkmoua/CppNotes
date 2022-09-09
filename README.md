@@ -19,9 +19,9 @@
 
 [Bitwise Operators](./IntermediateTopics/BitwiseOperators.md)
 
-[Trees and Deep Copies](./IntermediateTopics/TreesandDeepCopies.md)
+[Trees and Deep Copies](./IntermediateTopics/TreesAndDeepCopies.md)
 
-[Exceptions and Operator Overloading](./IntermediateTopics/ExceptionsandOperatorOverloading.md)
+[Exceptions and Operator Overloading](./IntermediateTopics/ExceptionsAndOperatorOverloading.md)
 
 [Inheritance and Chaining](./IntermediateTopics/InheritanceAndChaining.md)
 
